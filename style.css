@@ -1,0 +1,17 @@
+.centered {
+    display: grid;
+    place-items: center;
+}
+
+.svgcontainer {
+    display: inline-block;
+}
+
+.slidecontainer {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#myRange {
+    width: 100%;
+}
