@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <title>MVP Pitot Tube</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Importar libreria d3 para la visualización -->
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Importar librería MathJax para las formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
 
   <body>
     <div class='centered'>
-        <h1>MVP Pitot Tube</h1>
-        <div>
-            <div class="svgcontainer"><svg height='500' width='800' id='svg-canvas'></svg></div>
+        <h1>Pitot Tube</h1>
+        <div class='section'>
+          <h1>Explicación</h1>
+          <p>ecuaciones en linea \( x = {-b \pm \sqrt{b^2 - 4ac} \over 2a} \)</p>
+          <p>ecuaciones en otra linea $$ x = {-b \pm \sqrt{b^2 - 4ac} \over 2a} $$</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste necessitatibus commodi voluptate? Dignissimos veritatis, assumenda esse eveniet sequi aut voluptas fuga autem perferendis officiis omnis architecto unde nemo earum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae inventore dolor iusto? Animi, blanditiis itaque odio illum exercitationem suscipit quam amet ipsa ad repudiandae atque, omnis harum libero natus dolores!</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facilis earum at dignissimos maxime. Doloremque, reprehenderit. Temporibus, deleniti distinctio! Sed quis magni doloribus dolor provident velit commodi numquam ab animi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ratione sint ipsa quos earum. Dolores fugiat expedita amet maxime, sequi quidem quasi dolor iure? Nihil consectetur soluta vitae! Rerum, facere!</p>
+        </div>
+        <div class='section'>
+            <div class="svgcontainer"><svg height='600' width='800' id='svg-canvas'></svg></div>
             <div class="slidecontainer">
                 <h3>Velocidad del avión:</h3>
                 <input type="range" min="0" max="350" value="50" class="slider" id="myRange">
-                <p id='value'>Valor actual: 50 m/s</p>
-                <h3>Presión estática: P1</h3>
-                <h3>Presión dinámica: ρ*(U^2)/2</h3>
-                <h3>Presión total: </h3>
-                <h3>estática + dinámica = P1 + ρU^2/2</h3>
+                <p>
+                  <span id='value'>Valor actual: 50</span> 
+                  <span>\( m \over s \)</span>
+                </p>
+                <h3>Tipo de Gas</h3>
+                <select name="gas" id="gas-selector">
+                  <option value="aire" selected="selected">Aire</option>
+                  <option value="co2">Dióxido de carbono</option>
+                  <option value="benceno">Benceno</option>
+                  <option value="metano">Metano</option>
+                  <option value="ozono">Ozono</option>
+                  <option value="dicloro">Dicloro</option>
+                  <option value="vapor">Vapor de Agua</option>
+                </select>
+                <p>
+                  <span>\( \rho = \) </span>
+                  <span id="rho-value">1.205</span>
+                  <span>\(kg \over m^3\)</span>
+                </p>
+                <p class="bold-text">Presión estática: \( P_1\)</p>
+                <p class="bold-text">Presión dinámica: \( \rho U^2 \over 2\)</p>
+                <p class="bold-text">Presión total: </p>
+                <p> estática + dinámica = \( P_1 + {\rho U^2 \over 2}\)</p>
             </div>
         </div>
     </div>
