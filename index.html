@@ -16,11 +16,22 @@
         <h1>Pitot Tube</h1>
         <div class='section'>
           <h1>Explicación</h1>
-          <p>ecuaciones en linea \( x = {-b \pm \sqrt{b^2 - 4ac} \over 2a} \)</p>
-          <p>ecuaciones en otra linea $$ x = {-b \pm \sqrt{b^2 - 4ac} \over 2a} $$</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste necessitatibus commodi voluptate? Dignissimos veritatis, assumenda esse eveniet sequi aut voluptas fuga autem perferendis officiis omnis architecto unde nemo earum.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae inventore dolor iusto? Animi, blanditiis itaque odio illum exercitationem suscipit quam amet ipsa ad repudiandae atque, omnis harum libero natus dolores!</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facilis earum at dignissimos maxime. Doloremque, reprehenderit. Temporibus, deleniti distinctio! Sed quis magni doloribus dolor provident velit commodi numquam ab animi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ratione sint ipsa quos earum. Dolores fugiat expedita amet maxime, sequi quidem quasi dolor iure? Nihil consectetur soluta vitae! Rerum, facere!</p>
+          <p>En la animación inferior se muestra un tubo de Pitot de un avión y la relación que existe entre su velocidad y la altura del segundo tubo.</p>
+          <p>Esta relación está explicada por la ecuación de Bernoulli:</p>
+          <p> $$ {P_1 \over \rho \cdot g} + z_1 + {V_1^2 \over 2g} =  {P_2 \over \rho \cdot g} + z_2 + {V_2^2 \over 2g } $$</p>
+          <p>En el punto (1) y (2) la altura z es la misma, mientras que en el punto (2) la velocidad del flujo es 0, por lo que la ecuación se reduce a: </p>
+          <p>$$ {P_1 \over \rho \cdot g} + {V_1^2 \over 2g} =  {P_2 \over \rho \cdot g} $$ </p>
+          <p>Para obtener las presiones en (1) y (2) se mide la altura del fluido en los respectivos tubos, de acuerdo a la figura: </p>
+          <!-- Insertar figura 3 de la entrega parcial -->
+          <p>Se calcula la presión hidroestática en ambos puntos:</p>
+          <p>Presión hidroestática: \( P = \rho \cdot h \cdot g \)  </p>          
+          <p>En punto (1): \( P_1 = {{\rho \cdot g \cdot H}  \over {\rho \cdot g} } = H \).  En el punto 2:  \( P_2 = {{\rho \cdot g \cdot (H+h)  }  \over {\rho \cdot g} } = H+h \) </p>
+          <p>Con lo que la ecuación queda:</p>
+          <p>$$ H + {V_1^2 \over 2g} = H + h $$</p>
+          <p>$$  {V_1^2 \over 2g} = h $$</p>
+          <p>Es en esta expresión donde podemos ver que el aumento en la altura de la medición se debe a la energía cinética en el punto 2 del fluido.</p>
+          <p>Esta energía se transforma a presión al recorrer el tubo y causa que el fluido se eleve en h . Finalmente, despejamos \(v_1\):</p>
+          <p>$$ V_1 = \sqrt{2gh} $$</p>
         </div>
         <div class='section'>
             <div class="svgcontainer"><svg height='600' width='800' id='svg-canvas'></svg></div>
